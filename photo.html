@@ -1,0 +1,34 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Static Photo Gallery with JavaScript</title>  
+    <style>  
+        /* 添加你的样式 */  
+    </style>  
+</head>  
+<body>  
+    <div id="gallery"></div>  
+  
+    <script>  
+        // 静态图片列表  
+        const photoList = [  
+            'screenshot83.png',  
+            'screenshot75.png',  
+            'screenshot73.png',  
+            // 添加更多图片路径  
+        ];  
+  
+        // 动态创建图片元素并添加到页面  
+        const gallery = document.getElementById('gallery');  
+        photoList.forEach(function(photoPath) {  
+            const img = document.createElement('img');  
+            img.src = photoPath;  
+            img.alt = 'Photo'; // 你可以根据需要为每个图片设置不同的alt文本  
+            img.style.width = '200px'; 
+            gallery.appendChild(img);  
+        });  
+    </script>  
+</body>  
+</html>
