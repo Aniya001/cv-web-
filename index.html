@@ -1,34 +1,72 @@
-<!DOCTYPE html>  
-<html lang="en">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Static Photo Gallery with JavaScript</title>  
-    <style>  
-        /* 添加你的样式 */  
-    </style>  
-</head>  
-<body>  
-    <div id="gallery"></div>  
-  
-    <script>  
-        // 静态图片列表  
-        const photoList = [  
-            'screenshot83.png',  
-            'screenshot75.png',  
-            'screenshot73.png',  
-            // 添加更多图片路径  
-        ];  
-  
-        // 动态创建图片元素并添加到页面  
-        const gallery = document.getElementById('gallery');  
-        photoList.forEach(function(photoPath) {  
-            const img = document.createElement('img');  
-            img.src = photoPath;  
-            img.alt = 'Photo'; // 你可以根据需要为每个图片设置不同的alt文本  
-            img.style.width = '200px'; 
-            gallery.appendChild(img);  
-        });  
-    </script>  
-</body>  
+<!DOCTYPE html>      
+<html lang="en">      
+<head>      
+    <meta charset="UTF-8">      
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">      
+    <title>my cv-web</title>      
+    <style>      
+        #gallery {    
+            display: flex;    
+            flex-wrap: wrap;    
+            justify-content: space-between; /* 图片之间水平间距平均分布 */    
+        }    
+        #gallery img {    
+            flex-basis: calc(50% - 40px); /* 每个图片占据50%减去左右两边各10px的间距 */    
+            margin: 10px; /* 图片之间的间距 */    
+            max-width: calc(50% - 40px); /* 保证图片不超出容器宽度的一半减去间距 */    
+            height: auto; /* 保持图片的原始宽高比 */    
+        }    
+         body {  
+            text-align: center; /* 将body中的文本居中 */  
+        } 
+    </style>      
+</head>      
+<body>   
+	    <h1>身份证茶壶AR展示</h1>   
+    <div id="gallery"></div>      
+
+    <script>      
+        // 静态图片列表      
+        const photoList = [      
+            'screenshot83.png',      
+            'screenshot75.png',      
+            'screenshot73.png',    
+            'screenshot67.png',      
+            'screenshot63.png',      
+            'screenshot61.png',
+            'screenshot59.png',      
+            'screenshot56.png',      
+            'screenshot54.png',  
+            'screenshot53.png',      
+            'screenshot52.png',      
+            'screenshot49.png', 
+            'screenshot46.png',      
+            'screenshot45.png',      
+            'screenshot41.png', 
+            'screenshot36.png',      
+            'screenshot32.png',      
+            'screenshot22.png', 
+            'screenshot20.png',      
+            'screenshot13.png',      
+            'screenshot12.png', 
+            'screenshot11.png',      
+            'screenshot10.png',      
+            'screenshot9.png',   
+            'screenshot8.png',      
+            'screenshot6.png', 
+            'screenshot5.png',      
+            'screenshot3.png',      
+            'screenshot1.png'    
+        ];      
+      
+        // 动态创建图片元素并添加到页面      
+        const gallery = document.getElementById('gallery');      
+        photoList.forEach(function(photoPath) {      
+            const img = document.createElement('img');      
+            img.src = photoPath;      
+            img.alt = 'Photo'; // 你可以根据需要为每个图片设置不同的alt文本      
+            gallery.appendChild(img);      
+        });      
+    </script>      
+</body>      
 </html>
